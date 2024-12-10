@@ -15,3 +15,12 @@
   margin-bottom: 10px;
   height: auto;
 }
+.Card .cardtitle{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: hsl(0, 0%, 20%);
+}
+.Card .cardtext{
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsl(0, 0% , 30%);
+}
