@@ -1,0 +1,16 @@
+.greUser{
+  font-size: 2.5 rem;
+  background-color: hsl(120, 100%, 42%);
+  color: wheat;
+  padding: 10px;
+  border-radius: 5px ;
+  margin: 0;
+}
+.relog{
+  font-size: 2.5 rem;
+  background-color: hsl(0, 100%, 42%);
+  color: wheat;
+  padding: 10px;
+  border-radius: 5px ;
+  margin: 0;
+}
