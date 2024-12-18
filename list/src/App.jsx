@@ -1,35 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import Lis  from './list.jsx';
 function App() {
-  const [count, setCount] = useState(0)
+  const fruits=[{id: 1, name:"apple", calories: 95},
+    {id: 2, name:"coconut", calories: 45},
+    {id: 3, name:"banana",calories: 105} ,
+    {id: 4, name:"pineapple", calories: 155}];
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    const veg=[{id: 1, name:"potatoes", calories: 115},
+            {id: 2, name:"tomato", calories: 25},
+             {id: 3, name:"carrot",calories: 15} ,
+             {id: 4, name:"spinch", calories: 65}];
+  return(<>
+  {fruits.length>0? <Lis items= {fruits} category="Fruits"/>: null}
+  {veg.length>0? <Lis items= {veg} category="Vegetables"/>: null}
+  </>)
 }
 
 export default App
