@@ -5,6 +5,7 @@ function comp(){
     const [Quatity, setQuatity]= useState();
     const [comment, setcomment]= useState("");
     const [payment, setpayment]=useState();
+    const[shipping, setshipping]=useState();
 
 
     function handlerchnage(eve){
@@ -18,6 +19,9 @@ function comp(){
     }
     function handlepayment(event){
         setpayment(event.target.value)
+    }
+    function handleshipping(event){
+        setshipping(event.target.value)
     }
     return(
         <div>
@@ -36,6 +40,16 @@ function comp(){
                 <option value="Gift Card">Gift Card</option>
             </select>
             <p>payment: {payment}</p>
+
+            <label>
+                <input type="radio" value="pick Up" checked={shipping==="pick Up"} onChange={handleshipping}/>
+                Pick Up
+            </label>
+            <label>
+                <input type="radio" value="Delivery" checked={shipping==="Delivery"} onChange={handleshipping}/>
+                Delivery
+            </label>
+            <p>Shipping: {shipping}</p>
         </div>
     )
 }
